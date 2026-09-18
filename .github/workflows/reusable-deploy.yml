@@ -31,6 +31,9 @@ jobs:
         with:
           name: ${{ inputs.package-name }}
 
+      - name: Download artifact from build job
+        run: echo "Workflow stored in shared-workflows repo."
+        
       - name: Secret Information
         run: echo "Value of secret matches - ${{ secrets.azure-profile  == 'Placeholder' }}"
 
